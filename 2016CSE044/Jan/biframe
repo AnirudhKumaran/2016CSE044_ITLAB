@@ -1,0 +1,10 @@
+<html>
+	<head>
+		<title>Bi Frame</title>
+	</head>
+
+	<frameset cols = "50%,50%">
+			<frame name = "First" src = "/home/section1/2016CSE044/hello.html" />
+			<frame name = "Second" src = "" />
+	</frameset>
+</html>

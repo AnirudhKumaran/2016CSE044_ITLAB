@@ -1,0 +1,105 @@
+#ani{
+	font-size:125%;
+	letter-spacing:2pc;
+	line-height:1em;
+	color:rgb(0,0,255);
+	text-indent:10cm;
+	text-decoration:overline;
+	text-transform:capitalize;
+}
+
+p.three{
+	border:5px solid;
+	border-color:green white blue yellow;
+	margin-right:50px;
+}
+
+body{
+	background-image:url("spr.jpg");
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+}
+
+a.hilit:hover{
+	color:blue;
+}
+
+p{
+	text-shadow:4px 4px 8px blue;
+	font-size:75px;
+	color:white;
+}
+
+#navbar{
+	border:15px solid black;
+	background-color:gray;
+}
+
+#navbar:hover{
+	background-color:rgb(255,255,255,0.5);
+}
+
+a {
+	color:green;
+	text-decoration:none;
+}
+
+a:visited{
+	color:blue;
+}
+
+a:active{
+	color:yellow;
+}
+
+a:hover{
+	background-color:orange;
+	border-radius:5px;
+	color:white;
+	border:5px dashed yellow;
+	padding:10px;
+	font-size:90px;
+	font-weight:bolder;
+}
+
+li {
+	display:block;
+	border-bottom:5px solid white;
+	font-size:45px;
+	margin:35px;
+}
+
+div.new{
+	font-size:84px;
+	background-color:blue;
+	border:10px solid red;
+	border-radius:10px;
+	padding:60px 50px 20px 60px;
+}
+
+div.law{
+	width:300px;
+	border:25px solid green;
+	padding:25px;
+	margin:25px;
+}
+
+p.j {
+	display:inline-block;
+	background-color:yellow;
+	padding:20px;
+}
+
+div:hover p.j{
+	display:none;
+}
+
+p.h{
+	display:none;
+}
+
+#navbar:hover p{
+	display:block;
+	background-color:black;
+}
+
