@@ -1,0 +1,120 @@
+/* 14/102/2019 */
+
+/*body {
+	background-color:linen;
+	background-image:url("smiley.png");
+	background-repeat:repeat-y;
+}*/
+
+#bg{
+	background-image:url("smiley.png");
+	background-repeat:no-repeat;
+	background-position:top right;
+}
+
+p,h1{
+	color:red;
+}
+
+* {
+	font-size:20px;
+}
+
+p {
+	padding:50px;
+	border:4px red dotted;
+	text-transform:capitalize;
+	font-style:italic;
+}
+
+#para1 {
+	color:blue;
+}
+
+div {
+	border-radius:25px;
+	width:200px;
+	border:25px solid navy;
+	box-shadow:10px 10px blue;
+}
+
+.colortext {
+	color:green;
+}
+
+h1 {
+	font-size:3em;
+	background-color:lightblue;
+	margin-left:20px;
+	width:50%;
+	text-transform:uppercase;
+	text-shadow:2px 2px green;
+}
+
+
+
+#h1mar1{
+	margin:50px 20px;
+}
+
+#gr{
+	border:10px solid green;
+}
+
+a {
+	text-decoration:none;
+	color:red;
+}
+
+a:visited {
+	color:blue;
+}
+
+a,a:visited{
+	background-color:lightblue;
+}
+
+a:active,a:hover{
+	background-color:yellow;
+}
+
+table,th,td{
+	border:2px solid green;
+	border-collapse:collapse;
+}
+
+div p {
+	color:white;
+}
+
+div > p {
+	color:red;
+}
+
+ul {
+	list-style:square;
+}
+
+ol {
+	list-style:upper-roman;
+}
+
+.highlight:hover {
+	background-color:lightblue;
+} 
+
+p::first-letter {
+	color:black;
+	font-size:xx-large;
+}
+
+img {
+	height:400px;
+	width:400px;
+	margin:10px;
+	opacity:0.4;
+}
+
+img:hover{
+	opacity:1.0;
+}

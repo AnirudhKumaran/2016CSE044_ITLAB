@@ -1,0 +1,33 @@
+body {
+	background-color:linen;
+}
+
+#logo{
+	display:inline;
+	width:25%;
+}
+
+#header {
+	display:inline;
+}
+
+#logo{
+	width:50px;
+	height:50px;
+}
+
+li {
+	display:inline;
+	font-size:14px;
+	margin:10px;
+}
+
+#iban {
+	width:100%;
+	height:400px;
+}
+
+#navbar{
+	display:inline;
+	width:75%;
+}
