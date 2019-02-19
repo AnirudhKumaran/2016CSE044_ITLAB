@@ -2,32 +2,89 @@ body {
 	background-color:linen;
 }
 
-#logo{
-	display:inline;
-	width:25%;
-}
-
-#header {
-	display:inline;
+#navbar{
+	background-color:white;
+	height:100px;
+	margin:10px 0px 10px 0px;
 }
 
 #logo{
-	width:50px;
-	height:50px;
+	width:75px;
+	height:75px;
+	float:left;
+	margin-top:10px;
+	margin-left:100px;
+}
+
+ul{
+	text-align:right;
+	margin-right:100px;
 }
 
 li {
 	display:inline;
 	font-size:14px;
 	margin:10px;
+	border:black 2px solid;
+	border-radius:5px;
+	padding:10px;
+}
+
+li:hover{
+	border-color:blue white;
 }
 
 #iban {
 	width:100%;
-	height:400px;
+	height:369px;
 }
 
-#navbar{
-	display:inline;
-	width:75%;
+#smb {
+	margin:5px 0px;
+	height:200px;
+	padding:25px;
+	background-image:url("submenu1.jpg");
+	background-repeat:no-repeat;
+	opacity:0.7;
+}
+
+#smb h3,h2,h6{
+	margin-left:25px;
+}
+
+#footer{
+	margin:10px 0px;;
+	height:150px;
+	background-color:lightblue;
+}
+
+#socialimgs{
+	height:50px;
+	padding:15px;
+	padding-top:15px;
+	margin:10px;
+	
+}
+
+#icons{
+	height:50px;
+	width:50px;
+	margin: 5px 15px;
+}
+
+#icons:hover{
+	height:60px;
+	width:60px;
+}
+
+#boxes{
+	height:100px;
+	background-color:#ff345f;
+	padding:25px;
+}
+
+#boxes #icons{
+	height:50px;
+	width:50px;
+	margin: 5px 50px;
 }
