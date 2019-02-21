@@ -1,0 +1,110 @@
+body{
+	background-color:#8795fa;
+}
+
+#banner{
+	margin:none;
+	background-image:url("images/banner.jpg");
+	/*background-repeat:no-repeat;*/
+	height:500px;
+	width:100%;
+}
+
+#titlecard{
+	margin:15px;
+	margin-top:5px;
+	background-color:rgba(55,0,255,0.3);
+	width:300px;
+	height:auto;
+	float:left;
+}
+
+#titlecard h1{
+	text-shadow:4px 4px 8px yellow;
+}
+
+#social{
+	width:100px;
+	height:60px;
+	padding:5px;
+	display:inline;
+}
+
+#icons{
+	width:25px;
+	height:25px;
+	margin:10px;
+}
+
+#navbar{
+	background-color:teal;
+	margin:0% 5%;
+	height:50px;
+	padding:10px;
+	width:90%;
+	margin-top:28%;
+}
+
+#navbar ul{
+	text-align:center;
+}
+
+#navbar li{
+	display:inline;
+	margin:5px 25px;
+}
+
+#navbar li:hover{
+	color:white;
+}
+
+#navbar a{
+	text-decoration:none;
+	color:black;
+}
+
+#mainh{
+	height:400px;
+	width:auto;
+	background-color:white;
+	padding:25px;
+}
+
+#box1{
+	height:400px;
+	width:300px;
+	margin-left:25px;
+	background-image:linear-gradient(to right,white,skyblue);
+	float:left;
+}
+
+#box2{
+	height:auto;
+	width:200px;
+	background-image:linear-gradient(to right,white,skyblue);
+	float:left;
+	margin-left:50px;
+}
+
+#box1 p::first-letter{
+	color:red;
+	font-size:xx-large;
+}
+
+#box2 p::first-letter{
+	color:red;
+	font-size:xx-large;
+}
+
+#boximg{
+	height:150px;
+	width:100%;
+	opacity:0.5;
+}
+
+#footer{
+	margin:0px 50px;
+	padding-top:25px;
+	height:50px;
+	padding-bottom:25px;
+}
