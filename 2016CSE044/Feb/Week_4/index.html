@@ -1,0 +1,94 @@
+<html>
+
+	<head>
+		<title>HTML FORMS</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	
+	<body>
+		<h1 id="title">HTML FORM</h1>
+		<fieldset>
+		<table cellspacing="5" cellpadding="10" align="center">
+			<form>
+				<legend>Personal Information</legend>
+				<tr>
+				<td>First Name : </td>
+				<td><input type="text" name = "first_name" autofocus=true placeholder="Your Nice Name" required="true"/></td>
+				<tr>
+				
+				<tr>
+				<td>Last Name : </td>
+				<td><input type="text" name = "last_name" maxlength="10" /></td>
+				<tr>
+				
+				<tr>
+				<td>Description : </td>
+				<td><textarea rows="5" cols="50" placeholder="Enter description here"></textarea></td>
+				<tr>
+				
+				<tr>
+				<td>Transport : </td>
+				<td><input type = "checkbox" value="bike" />Bike &nbsp &nbsp <input type = "checkbox" value="car" />Car</td>
+				<tr>
+				
+				<tr>
+				<td>Gender : </td>
+				<td><input type = "radio" name = "gender" value="M" checked="true"/>Male &nbsp &nbsp 
+						<input type = "radio" name = "gender" value="F" />Female &nbsp &nbsp 
+						<input type = "radio" name = "gender" value="O" />Other &nbsp &nbsp </td>
+				<tr>
+				
+				<tr>
+					<td>Department : </td>
+					<td><select name = "depts" size = "3" multiple="true">
+							<option value="cse">CSE</option>
+							<option value="ece">ECE</option>
+							<option value="eee" selected="true">EEE</option>
+							<option value="mec">MEC</option>
+							<option value="civ">CIV</option>
+							<option value="pet">PET</option>
+					</select></td>
+				</tr>
+				
+				<tr>
+					<td>Color : </td>
+					<td><input type="color" /></td>
+				</tr>
+				
+				<tr>
+					<td>Password : </td>
+					<td><input type="password" name="psw" /></td>
+				</tr>
+				
+				<tr>
+					<td>Confirm Password : </td>
+					<td><input type="password" name="psw" /></td>
+				</tr>
+				
+				<tr>
+					<td>Time :  </td>
+					<td><input type="time" /></td>
+				</tr>
+				
+				<tr>
+					<td>Date :  </td>
+					<td><input type="date" /></td>
+				</tr>
+				
+				<tr>
+					<td>Locality : </td>
+					<td><input type="text" value="Bangalore" readonly="true" disabled="true"  size="30" /></td>
+				</tr>
+				
+				<tr>
+					<td><input type="submit" value="Submit"/></td>
+					<td><input type="reset"/></td>
+				</tr>
+
+			</form>
+		</table>
+		</fieldset>
+	</body>
+
+
+</html>
