@@ -1,0 +1,27 @@
+<html>
+
+	<head>
+		<title>Validation Form</title>
+		<script src="valid.js" ></script>
+	</head>
+	
+	<body>
+		<form action = "submit.php" name="RegForm" onsubmit="return validation();" method="post">
+			<p>Name : <input type="text" name="fname" autofocus/></p>
+			<p>Address : <textarea rows="5" cols="50" name="addr">Enter address here</textarea></p>
+			<p>Email id : <input type="email" name="emailid"/></p>
+			<p>Password : <input type="password" name="passw"/></p>
+			<p>Telephone : <input type="text" name="mobno"/></p>
+			<p>Select your course : 
+			<select name="course">
+				<option value="BTECH">BTECH</option>
+				<option value="BBA">BBA</option>
+				<option value="BCOM">BCOM</option>
+				<option value="BCA">BCA</option>
+			</select></p>
+			<p>Comments : <textarea rows="5" cols="50" name="comm">Enter address here</textarea></p>
+			<p><input type="submit" value="Submit">&nbsp&nbsp&nbsp<input type="reset" value="Reset"></p>
+		</form>
+	</body>
+
+</html>
