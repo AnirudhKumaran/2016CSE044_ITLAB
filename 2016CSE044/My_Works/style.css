@@ -1,0 +1,46 @@
+#socbar{
+	position:fixed;
+	width:50px;
+	height:200px;
+}
+
+#section{
+	display:inline-block;
+	height:50px;
+	width:250px;
+	margin-bottom:5px;
+}
+
+#bar{
+	width:0px;
+	height:50px;
+	float:left;
+	background-color:yellow;
+	border:1px black solid;
+	font-size:18px;
+	color:yellow;
+	line-height:50px;
+	text-align:center;
+	opacity:0.0;
+	transition: width 1s,opacity 1s,color 1s;
+}
+
+#icons{
+	width:50px;
+	height:50px;
+	float:left;
+	background-color:blue;
+	border:1px black dotted;
+	border-radius:25%;
+	font-size:25px;
+	color:yellow;
+	line-height:50px;
+	text-align:center;
+}
+
+#section:hover #bar{
+	width:150px;
+	opacity:1.0;
+	color:blue;
+	margin-right:5px;
+}
