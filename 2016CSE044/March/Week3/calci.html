@@ -1,0 +1,49 @@
+<html>
+
+	<head>
+		<title>Js Calculator</title>
+		<script src="calci.js"></script>
+		<style>
+			tr{
+				text-align:center;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--<p id="stc">Flag down !!</p>
+		<p id="ntc">Flag down !!</p>
+		<p id="otc">Flag down !!</p>
+		<p id="atc">Flag down !!</p>-->
+		<table bgcolor="skyblue" cellspacing="30">
+			<tr>
+				<td colspan="3" bgcolor="black"><input type="text" id="display" readonly></td>
+				<td><input type="button" value="C" onclick="clearall();"></td>
+			</tr>
+			<tr>
+				<td><input type="button" value="7" onclick="num7();"></td>
+				<td><input type="button" value="8" onclick="num8();"></td>
+				<td><input type="button" value="9" onclick="num9();"></td>
+				<td><input type="button" value="+" onclick="addop();"></td>
+			</tr>
+			<tr>
+				<td><input type="button" value="4" onclick="num4();"></td>
+				<td><input type="button" value="5" onclick="num5();"></td>
+				<td><input type="button" value="6" onclick="num6();"></td>
+				<td><input type="button" value="-" onclick="subop();"></td>
+			</tr>
+			<tr>
+				<td><input type="button" value="1" onclick="num1();"></td>
+				<td><input type="button" value="2" onclick="num2();"></td>
+				<td><input type="button" value="3" onclick="num3();"></td>			
+				<td><input type="button" value="*" onclick="mulop();"></td>
+			</tr>
+			<tr>
+				<td><input type="button" value="<-" onclick="backspace();"></td>
+				<td><input type="button" value="0" onclick="num0();"></td>
+				<td><input type="button" value="=" onclick="compute();"></td>
+				<td><input type="button" value="/" onclick="divop();"></td>
+			</tr>
+		</table>
+	</body>
+</html>
