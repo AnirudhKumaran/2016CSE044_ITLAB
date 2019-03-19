@@ -7,8 +7,9 @@
 #section{
 	display:inline-block;
 	height:50px;
-	width:250px;
+	width:60px;
 	margin-bottom:5px;
+	transition:width 1s;
 }
 
 #bar{
@@ -39,8 +40,12 @@
 }
 
 #section:hover #bar{
-	width:150px;
+	width:125px;
 	opacity:1.0;
 	color:blue;
 	margin-right:5px;
+}
+
+#section:hover{
+	width:200px;
 }

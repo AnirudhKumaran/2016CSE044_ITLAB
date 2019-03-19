@@ -1,0 +1,187 @@
+<html>
+<head>
+ <title>Js Validation</title>     
+
+
+ <script type="text/javascript">
+ function validateForm()
+  {
+   var name=document.getElementById("Name").value;
+   var age=document.getElementById("age").value;
+   var gender= document.getElementsByName("gender");
+   var adress=document.getElementById("ad").value;
+ var e = document.getElementById("state");
+var strUser = e.options[e.selectedIndex].value;
+   var no=document.getElementById("phone").value;
+   var x=document.getElementById("e").value;
+   
+   
+ 
+   if(name=="")
+   {
+   alert("Name field empty");
+   return false;
+   }
+   else
+   {
+   for(i=0;i<name.length;i++)
+    if(!((name.charAt(i)>='a'&&name.charAt(i)<='z')||(name.charAt(i)>='A'&&name.charAt(i)<='Z')))
+    {
+    alert("enter apphabets only in name field");
+    return false;
+    }
+   }
+   
+   if(name.length<5)
+   {
+   alert("username length should greater than 5 ");
+   return false;
+   }
+   
+   
+   if(age=="")
+   {
+   alert("Age field empty");
+   return false;
+   }
+   
+   if(age<1||age>120)
+   {
+    alert("Age value between 1 and 120 ");
+    return false;
+   }
+   else
+   {
+   for(i=0;i<age.length;i++)
+    if(!(age.charAt(i)>='0'&&age.charAt(i)<='9'))
+    {
+    alert("enter  number only in age field");
+    return false;
+    }
+   }
+
+     if ( (gender[0].checked == false ) && ( gender[1].checked == false ) ) 
+{
+alert ( "Please choose your Gender: Male or Female" ); 
+return false;
+}
+   
+   
+   
+   if(adress=="")
+   {
+   alert("Address field empty");
+   return false;
+   }
+
+
+if(strUser==0) 
+{
+alert("Please select your state");
+return false;
+}
+
+
+   
+   if(no=="")
+   {
+   alert("phone field empty");
+   return false;
+   }
+      
+   if(no.length>10||no.length<10)
+   {
+   alert("invalid phone number");
+   return false;
+   }
+   else
+   {
+    for(i=0;i<no.length;i++)
+    if(!(no.charAt(i)>='0'&&no.charAt(i)<='9'))
+    {
+    alert("enter   only numbers in phone field");
+    return false;
+    }
+   }
+   
+    
+   if(x=="")
+   {
+   alert("email field empty");
+   return false;
+   }
+   else
+   {
+    var atpos=x.indexOf("@");
+    var dotpos=x.lastIndexOf(".");
+    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
+    {
+    alert("Not a valid e-mail address");
+    return false;
+    }
+    }
+   
+   
+   
+   
+  
+ }
+</script>
+
+</head>
+<body>
+<center>
+
+<table border="0" bgcolor="skyblue">
+<form  name="UserReg" action="User.html" method="post"  onSubmit="return validateForm()"> 
+
+   <tr>
+       <td height="28" align="right">Name :&nbsp;</td>
+       <td height="28"><input type="text"  id="Name" size="25"   /></td> 
+   </tr>
+    <tr>
+       <td height="28"  align="right">Age  :&nbsp;</td>
+      <td height="28"><input type="text" id="age" size="25"  /></td>
+  </tr>
+ <tr>
+       <td height="28"  align="right">Gender  :&nbsp;</td>
+      <td height="28"><input type="radio" name="gender" value="male"> Male
+	 <input type="radio" name="gender" value="female"> Female</td>
+  </tr>
+   <tr>
+       <td height="28"  align="right" valign="top">Adress  :&nbsp;</td>
+      <td ><textarea rows="6" cols="20" id="ad"></textarea><td>
+  </tr>
+
+ <tr>
+       <td height="28"  align="right">State  :&nbsp;</td>
+      <td height="28">
+   <select id="state">
+   <option value="0">select</option>
+  <option value="1">Kerala</option>
+  <option value="2">Karnataka</option>
+  <option value="3">AndraPradesh</option>
+  <option value="4">Tamilnadu</option>
+</select>
+</td>
+  </tr>
+
+
+  <tr>
+       <td height="28"  align="right">Mob_No  :&nbsp;</td>
+      <td height="28"><input type="text" id="phone" size="25"  /><td>
+  </tr>
+ 
+   <tr>
+       <td height="28"  align="right">Email_id :&nbsp;</td>
+      <td height="28"><input type="text" id="e" size="25"  /></td>
+  </tr>
+  <tr>
+       <td height="35"></td>
+       <td height="35"><input type="submit" value="Sign Up" name="UserSigUp"  /></td> 
+   </tr>
+</form>
+</table>
+</center>
+</body>
+</html>
