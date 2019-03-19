@@ -8,74 +8,23 @@ function clearall(){
 	document.getElementById("display").value=gt;
 }
 
-function num0(){
+function numbut(s){
 	nc=oc+1;
 	it=document.getElementById("display").value;
-	gt=it+"0";
+	gt=it+s;
 	document.getElementById("display").value=gt;
 }
 
-function num1(){
-	nc=oc+1;
-	it=document.getElementById("display").value;
-	gt=it+"1";
-	document.getElementById("display").value=gt;
-}
-
-function num2(){
-	nc=oc+1;
-	it=document.getElementById("display").value;
-	gt=it+"2";
-	document.getElementById("display").value=gt;
-}
-
-function num3(){
-	nc=oc+1;
-	it=document.getElementById("display").value;
-	gt=it+"3";
-	document.getElementById("display").value=gt;
-}
-
-function num4(){
-	nc=oc+1;
-	it=document.getElementById("display").value;
-	gt=it+"4";
-	document.getElementById("display").value=gt;
-}
-
-function num5(){
-	nc=oc+1;
-	it=document.getElementById("display").value;
-	gt=it+"5";
-	document.getElementById("display").value=gt;
-}
-
-function num6(){
-	nc=oc+1;
-	it=document.getElementById("display").value;
-	gt=it+"6";
-	document.getElementById("display").value=gt;
-}
-
-function num7(){
-	nc=oc+1;
-	it=document.getElementById("display").value;
-	gt=it+"7";
-	document.getElementById("display").value=gt;
-}
-
-function num8(){
-	nc=oc+1;
-	it=document.getElementById("display").value;
-	gt=it+"8";
-	document.getElementById("display").value=gt;
-}
-
-function num9(){
-	nc=oc+1;
-	it=document.getElementById("display").value;
-	gt=it+"9";
-	document.getElementById("display").value=gt;
+function optbut(o){
+	if(nc==oc+1){
+		oc=nc;
+		it=document.getElementById("display").value;
+		var n=it.length;
+		if(it.charAt(n-1)!="+" && it.charAt(n-1)!="-" && it.charAt(n-1)!="*" && it.charAt(n-1)!="/"){
+			gt=it+o;
+			document.getElementById("display").value=gt;
+		}
+	}
 }
 
 function backspace(){
@@ -91,54 +40,6 @@ function backspace(){
 	}
 	gt=it.slice(0,-1);
 	document.getElementById("display").value=gt;
-}
-
-function addop(){
-	if(nc==oc+1){
-		oc=nc;
-		it=document.getElementById("display").value;
-		var n=it.length;
-		if(it.charAt(n-1)!="+" && it.charAt(n-1)!="-" && it.charAt(n-1)!="*" && it.charAt(n-1)!="/"){
-			gt=it+"+";
-			document.getElementById("display").value=gt;
-		}
-	}
-}
-
-function subop(){
-	if(nc==oc+1){
-		oc=nc;
-		it=document.getElementById("display").value;
-		var n=it.length;
-		if(it.charAt(n-1)!="+" && it.charAt(n-1)!="-" && it.charAt(n-1)!="*" && it.charAt(n-1)!="/"){
-			gt=it+"-";
-			document.getElementById("display").value=gt;
-		}
-	}
-}
-
-function mulop(){
-	if(nc==oc+1){
-		oc=nc;
-		it=document.getElementById("display").value;
-		var n=it.length;
-		if(it.charAt(n-1)!="+" && it.charAt(n-1)!="-" && it.charAt(n-1)!="*" && it.charAt(n-1)!="/"){
-			gt=it+"*";
-			document.getElementById("display").value=gt;
-		}
-	}
-}
-
-function divop(){
-	if(nc==oc+1){
-		oc=nc;
-		it=document.getElementById("display").value;
-		var n=it.length;
-		if(it.charAt(n-1)!="+" && it.charAt(n-1)!="-" && it.charAt(n-1)!="*" && it.charAt(n-1)!="/"){
-			gt=it+"/";
-			document.getElementById("display").value=gt;
-		}
-	}
 }
 
 function compute(){
