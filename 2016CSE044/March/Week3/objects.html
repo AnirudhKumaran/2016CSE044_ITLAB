@@ -1,0 +1,49 @@
+<html>
+
+	<head>
+		<title>Objects Constructors</title>
+		<script>
+			var car = {
+				name : "XUV",
+				mno : 500,
+				fullcarname:function(){
+					document.write("<br>"+this.name+" "+this.mno);
+				},
+				
+				prop:{
+					col:"red",
+					max_speed:160
+				}
+			}
+			var dress = new Object();
+			dress.material="silk";
+			dress.type="saree";
+			dress.col="red";
+			dress.exactnt=function(){
+				document.write(" " + this.material+" "+this.type);
+			}
+
+			function school(name,loc,est){
+				this.name=name;
+				this.loc=loc;
+				this.est=est;
+
+				this.displayinfo=function(){
+					document.write(this.name+" was established in " + this.est + " at " + this.loc +".");
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+		<script>
+			scl1 = new school("DPS","Delhi",1995);
+			scl1.displayinfo();
+			document.write("<br>"+car.name);
+			car.fullcarname();
+			document.write("Max Speed : "+car.prop.max_speed);
+			document.write("<br>Its a "+dress.col);
+			dress.exactnt();
+		</script>
+	</body>
+</html>
