@@ -5,7 +5,7 @@
 		<script src="jvsc.js"></script>
 	</head>
 	
-	<body>
+	<body bgcolor="orange">
 		<center><h1>Form Validation</h1></center>
 		<br>
 		<table align="center" bgcolor="skyblue" cellpadding="10" cellspacing="10">
@@ -17,19 +17,19 @@
 				
 				<tr>
 					<td>Age : </td>
-					<td><input type="number" value="20" id="hage" /></td>
+					<td><input type="number" value="23" id="hage" /></td>
 				</tr>
 				
 				<tr>
 					<td>Gender : </td>
-					<td><input type="radio" name="hgender" />&nbspMale&nbsp&nbsp&nbsp
+					<td><input type="radio" name="hgender" checked/>&nbspMale&nbsp&nbsp&nbsp
 							<input type="radio" name="hgender" />&nbspFemale&nbsp&nbsp&nbsp
 							<input type="radio" name="hgender" />&nbspOther</td>
 				</tr>
 				
 				<tr>
 					<td>Year of Birth :</td>
-					<td><input type="number" id="hyob" value="1998"/></td>
+					<td><input type="number" id="hyob" value="1996"/></td>
 				</tr>
 				
 				<tr>
@@ -39,7 +39,7 @@
 				
 				<tr>
 					<td>Mobile : </td>
-					<td><input type="text" id="hmob" value="9845"></td>
+					<td><input type="text" id="hmob" value="9845229812"></td>
 				</tr>
 				
 				<tr>
@@ -54,12 +54,12 @@
 				
 				<tr>
 					<td>Email : </td>
-					<td><input type="text" id="hmail" value="ak@gmail.com"></td>
+					<td><input type="text" id="hmail" value="ak@gmail.com" oninput="out()"></td>
 				</tr>
 				
 				<tr>
 					<td>UID : </td>
-					<td><input type="text" id="huid" value="user1"/></td>
+					<td><input type="text" id="huid" value="user1" readonly="true"/></td>
 				</tr>
 				
 				<tr>
