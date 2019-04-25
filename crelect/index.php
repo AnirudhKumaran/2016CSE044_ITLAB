@@ -1,3 +1,36 @@
+<?php
+   include("dbcon.php");
+   session_start();
+   
+   if($_SERVER["REQUEST_METHOD"] == "POST") {
+      // username and password sent from form 
+      
+      $myusername = mysqli_real_escape_string($conn,$_POST['uid']);
+      $mypassword = mysqli_real_escape_string($conn,$_POST['ups']); 
+      
+      $sql = "SELECT UID,UTYPE FROM LOGIN WHERE UID = '$myusername' and UPASS = '$mypassword'";
+      $result = mysqli_query($conn,$sql);
+      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+      #$active = $row['active'];
+      
+      $count = mysqli_num_rows($result);
+      
+      // If result matched $myusername and $mypassword, table row must be 1 row
+		
+      if($count == 1) {
+         #session_register("myusername");
+         $_SESSION['login_user'] = $myusername;
+         $_SESSION['login_type'] = $row['UTYPE'];
+         if($row['UTYPE']=='A')
+					header("location: admin.html");
+        else
+        	header("location: home.php");
+      }else {
+         #$error = "Your Login Name or Password is invalid";
+         echo "<script>alert('Unsuccessful Login !!');</script>";
+      }
+   }
+?>
 <html>
 
 	<head>
@@ -30,7 +63,7 @@
 			body{
 				background-image:url('images/home_bg.jpg');
 				background-repeat:no-repeat;
-				background-size: cover;
+				background-size: 1360px 720px;
 			}
 			#box{
 				background-color:rgba(50,50,50,0.5);
@@ -45,9 +78,9 @@
 
 	<body>
 		<center><div id="box">
-			<form action = "" method="POST" onsubmit = "">
-				<input type="text" name = "uid" placeholder="Username" id="margins"/>
-				<input type="password" name = "ups" placeholder="Password" id="margins"/>
+			<form action = "" method="POST">
+				<input type="text" name = "uid" placeholder="Username" id="margins" required/>
+				<input type="password" name = "ups" placeholder="Password" id="margins" required/>
 				<input type="submit" value="Login" id="margins"/>
 			</form>
 		</div></center>

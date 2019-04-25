@@ -60,24 +60,65 @@
 				height:64px;
 				width:64px;
 			}
+			#navbar{
+				height:80px;
+				background-color:lightblue;
+				padding:10px;
+			}
+			
+			ul{
+				list-style-type:none;
+			}
+			li{
+								float:left;
+								margin:0px 10px;
+			}
+			li a{
+				text-decoration:none;
+				padding:10px;
+				background-color:rgb(70,130,80);
+				border:2px ridge white;
+				color:white;
+			}
+			li a:hover{
+				background-color:rgb(137,207,240);
+				border:2px ridge white;
+			}
+			#footer{
+				height:50px;
+				margin-top:10px;
+				background-color:black;
+				padding:25px;
+			}
 		</style>
 	</head>
 
 	<body>
+		<div id="navbar">
+			<h1 style="display:inline;float:left;margin-left:10px;">CR ELECTION</h1>
+			<ul style="display:inline;float:left;margin-left:550px;" >
+				<li><a href="" >HOME</a></li>
+				<li><a href="" >RESULTS</a></li>
+				<li><a href="logout.php" >LOGOUT</a></li>
+			<ul>
+		</div>
+		<?php include("session.php"); ?>
+		<div id="welbo" style="height:40px;background-color:lightgray;padding:5px;margin-bottom:10px;">
+			<p> Welcome, <?php echo $login_session ?></p>
+		</div>
 		<?php
 			include("dbcon.php");
 			$fid = $mid = "";
 			if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			
-				$fid = $_POST["votef"];
-				$mid = $_POST["votem"];
+				$fid = isset($_POST["votef"]);
+				$mid = isset($_POST["votem"]);
 				if($fid!="" &&$mid!=""){
-					$sql = "UPDATE CANDI SET CVOTE = CVOTE + 1 WHERE CID IN ('".$fid."','".$mid."')";
-					
+					$sql = "UPDATE CANDI SET CVOTES = CVOTES + 1 WHERE CID IN ('".$fid."','".$mid."')";
 					if(mysqli_query($conn,$sql)){
 						echo "<script>alert('YOUR VOTE IS CASTED SUCCESSFULLY !');</script>";
 					}else{
-						$stmt = "Error".mysqli_error($conN);
+						$stmt = "Error".mysqli_error($conn);
 						//echo $stmt;
 					}
 				}else
@@ -129,5 +170,8 @@
 				</table>
 			</form>
 		</div></center>
+		<div id="footer">
+			<p style="color:white;" align="center">Presidency University &copy Student - 2016CSE044</p>
+		</div>
 	</body>
 </html>
