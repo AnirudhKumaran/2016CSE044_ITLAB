@@ -7,6 +7,9 @@
 			tr{
 				text-align:center;
 			}
+			input{
+				font-size:24px;
+			}
 		</style>
 	</head>
 
@@ -21,28 +24,28 @@
 				<td><input type="button" value="C" onclick="clearall();"></td>
 			</tr>
 			<tr>
-				<td><input type="button" value="7" onclick="num7();"></td>
-				<td><input type="button" value="8" onclick="num8();"></td>
-				<td><input type="button" value="9" onclick="num9();"></td>
-				<td><input type="button" value="+" onclick="addop();"></td>
+				<td><input type="button" value="7" onclick="numbut('7');"></td>
+				<td><input type="button" value="8" onclick="numbut('8');"></td>
+				<td><input type="button" value="9" onclick="numbut('9');"></td>
+				<td><input type="button" value="+" onclick="optbut('+');"></td>
 			</tr>
 			<tr>
-				<td><input type="button" value="4" onclick="num4();"></td>
-				<td><input type="button" value="5" onclick="num5();"></td>
-				<td><input type="button" value="6" onclick="num6();"></td>
-				<td><input type="button" value="-" onclick="subop();"></td>
+				<td><input type="button" value="4" onclick="numbut('4');"></td>
+				<td><input type="button" value="5" onclick="numbut('5');"></td>
+				<td><input type="button" value="6" onclick="numbut('6');"></td>
+				<td><input type="button" value="-" onclick="optbut('-');"></td>
 			</tr>
 			<tr>
-				<td><input type="button" value="1" onclick="num1();"></td>
-				<td><input type="button" value="2" onclick="num2();"></td>
-				<td><input type="button" value="3" onclick="num3();"></td>			
-				<td><input type="button" value="*" onclick="mulop();"></td>
+				<td><input type="button" value="1" onclick="numbut('1');"></td>
+				<td><input type="button" value="2" onclick="numbut('2');"></td>
+				<td><input type="button" value="3" onclick="numbut('3');"></td>			
+				<td><input type="button" value="*" onclick="optbut('*');"></td>
 			</tr>
 			<tr>
-				<td><input type="button" value="<-" onclick="backspace();"></td>
-				<td><input type="button" value="0" onclick="num0();"></td>
+				<td><input type="button" value="<" onclick="backspace();"></td>
+				<td><input type="button" value="0" onclick="numbut('0');"></td>
 				<td><input type="button" value="=" onclick="compute();"></td>
-				<td><input type="button" value="/" onclick="divop();"></td>
+				<td><input type="button" value="/" onclick="optbut('/');"></td>
 			</tr>
 		</table>
 	</body>
