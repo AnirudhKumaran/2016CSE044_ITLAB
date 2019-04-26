@@ -1,0 +1,91 @@
+<html>
+
+	<head>
+		<title>Mid Term Assesment</title>
+		<script>
+			var count = 0;
+			function loginvalid(){
+
+
+				var vuid = document.getElementById("uname");
+				var pwd = document.getElementById("upass");
+				
+				if(vuid.value==""){
+					alert("Username must not be empty");
+					vuid.focus();
+					return false;
+				}
+				
+				if(pwd.value==""){
+					alert("Password must not be empty");
+					pwd.focus();
+					return false;
+				}
+				
+				if(vuid.value=="2016cse001" && pwd.value=="2016001")
+					return true;
+				else{
+					if(count<2){
+						count+=1;
+						//document.getElementById("test").innerHTML=count;
+						vuid.value="";
+						pwd.value="";
+						document.getElementById("upara").innerHTML="*";
+						document.getElementById("ppara").innerHTML="*";
+						alert("Wrong Username/Password, "+(3-count)+" chance left !!");
+						vuid.focus();
+						return false;
+					}else{
+						alert("all your 3 chances are over !!");
+						document.getElementById("uname").disabled=true;
+						document.getElementById("upass").disabled=true;
+						return false;
+					}
+				}	
+					
+				return false
+			}
+		</script>
+		
+		<style>
+			div{
+				background-color:powderblue;
+				width:500px;
+				padding:25px;
+				margin-top:12.5%;
+			}
+			
+			#upara,#ppara{
+				color:red;
+				font-size:24px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!-- <h1 id="test">#</h1> -->
+		<center><div>
+			<h1>Login</h1>
+			<br>
+			<table cellspacing="25px">
+				<form action="2016CSE044_register.html" onsubmit="return loginvalid();" method="post">
+			
+					<tr>
+						<td><input id = "uname" type="text" placeholder="USERNAME"/></td>
+						<td><p id ="upara"></p></td>
+					</tr>
+			
+					<tr>
+						<td><input id = "upass" type="password" placeholder="PASSWORD" /></td>
+						<td><p id ="ppara"></p></td>
+					</tr>
+					
+					<tr align="center">
+						<td><input type="submit" value="Login"/></td>
+					</tr>
+				</form>
+			</table>
+		</div></center>
+	</body>
+
+</html>

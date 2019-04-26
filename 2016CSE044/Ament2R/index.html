@@ -1,0 +1,83 @@
+<html>
+	
+	<head>
+		<title>Form Validation</title>
+		<script src="jvsc.js"></script>
+	</head>
+	
+	<body bgcolor="orange">
+		<center><h1>Form Validation</h1></center>
+		<br>
+		<table align="center" bgcolor="skyblue" cellpadding="10" cellspacing="10">
+			<form action="home.html" name="regform" method="post" onsubmit="return validform();">
+				<tr>
+					<td>Name : </td>
+					<td><input type="text" id="hname" value="Anirudh" /></td>
+				</tr>
+				
+				<tr>
+					<td>Age : </td>
+					<td><input type="number" value="23" id="hage" /></td>
+				</tr>
+				
+				<tr>
+					<td>Gender : </td>
+					<td><input type="radio" name="hgender" checked/>&nbspMale&nbsp&nbsp&nbsp
+							<input type="radio" name="hgender" />&nbspFemale&nbsp&nbsp&nbsp
+							<input type="radio" name="hgender" />&nbspOther</td>
+				</tr>
+				
+				<tr>
+					<td>Year of Birth :</td>
+					<td><input type="number" id="hyob" value="1996"/></td>
+				</tr>
+				
+				<tr>
+					<td>Address : </td>
+					<td><textarea id="haddr" rows="5" cols="30">Kalyan Nagar</textarea></td>
+				</tr>
+				
+				<tr>
+					<td>Mobile : </td>
+					<td><input type="text" id="hmob" value="9845229812"></td>
+				</tr>
+				
+				<tr>
+					<td>State : </td>
+					<td><select id="hstate">
+							<option value="0">Karnataka</option>
+							<option value="1">Kerala</option>
+							<option value="2">Tamil Nadu</option>
+							<option value="3">Telangana</option>
+							</select></td>
+				</tr>
+				
+				<tr>
+					<td>Email : </td>
+					<td><input type="text" id="hmail" value="ak@gmail.com" oninput="out()"></td>
+				</tr>
+				
+				<tr>
+					<td>UID : </td>
+					<td><input type="text" id="huid" value="user1" readonly="true"/></td>
+				</tr>
+				
+				<tr>
+					<td>Password : </td>
+					<td><input type="password" id="hpass" value="1234"/></td>
+				</tr>
+				
+				<tr>
+					<td>Confirm Password : </td>
+					<td><input type="password" id="hcpass" value="1234"/></td>
+				</tr>
+				
+				<tr>
+					<td><input type="reset" value="Reset" /></td>
+					<td><input type="submit" value="Submit" /></td>
+				</tr>
+			</form>
+		</table>
+	</body>
+
+</htm>

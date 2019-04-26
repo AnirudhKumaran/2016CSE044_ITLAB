@@ -1,0 +1,140 @@
+<html>
+	<head>
+		<title>Event Registration</title>
+		<script>
+			var  i;
+			
+			function regvalid(){
+					var ouid = document.getElementById("uname");
+					var omob = document.getElementById("umob");
+					var osem = document.getElementById("usem");
+					var obr = document.getElementById("ucbr");
+					var oe = document.getElementById("uename");
+					var oetype = document.getElementsByName("etype");
+				
+					var vuid = ouid.value;
+					var vmob = omob.value;
+					var vsem = osem.value;
+					var strbr = obr.options[obr.selectedIndex].value;
+					var strnm = oe.options[oe.selectedIndex].value;
+					
+					if(vuid==""){
+						alert("Name Field must not be empty !!");
+						return false;
+					}
+					
+					for(i=0;i<vuid.length;i++){
+						if(vuid.charAt(i)>='0' && vuid.charAt(i)<='9'){
+							alert("No numbers in the name field !!");	
+							return false;
+						}
+					}
+					
+					if(vmob==""){
+						alert("Mobile Field must not be empty !!");
+						return false;
+					}
+					
+					if(vmob.length<10){
+						alert("Enter a proper mobile number !!");
+						return false;
+					}
+					
+					for(i=0;i<vmob.length;i++){
+						if(vmob.charAt(i)<'0' || vmob.charAt(i)>'9'){
+							alert("Only numbers in the mobile field !!");	
+							return false;
+						}
+					}
+					
+					if(strbr=="0"){
+						alert("Select a branch !!");
+						return false;
+					}
+					
+					if(vsem==""){
+						alert("Semester must not be empty !!");
+						return false;
+					}
+					
+					if(vsem<1 ||vsem>8){
+						alert("Semester must not be proper value !!");
+						return false;
+					}
+					
+					if(oetype[0].checked==false && oetype[1].checked==false){
+						alert("Event type must be selected !!");
+						return false;
+					}		
+					
+					if(strnm=="0"){
+						alert("Select an event !!");
+						return false;
+					}
+					
+					if(oetype[1].checked==true){
+						var gno = prompt("Enter number of team members : ");
+						var gname = prompt("Enter number of team members names : ");
+						return true;
+					}	
+				
+					return true;
+			}
+		</script>
+		
+	</head>
+	
+	<body>
+		<br>
+		<h1 align="center">Registration</h1>
+		<br>
+		<table align="center" cellspacing="20">
+			<form onsubmit="return regvalid();" action="2016CSE044_succ.html" >
+				<tr>
+					<td>Name : </td>
+					<td><input type="text" id="uname" maxlength="15" /></td>
+				</tr>
+				
+				<tr>
+					<td>Mobile Number : </td>
+					<td><input type="text" id="umob" maxlength="10" /></td>
+				</tr>
+				
+				<tr>
+					<td>Branch : </td>
+					<td><select id="ucbr">
+								<option value="0">SELECT</option>
+								<option value="cse">CSE</option>
+								<option value="mec">MEC</option>
+								<option value="civ">CIV</option>
+							</select></td>
+				</tr>
+				
+				<tr>
+					<td>Semester : </td>
+					<td><input type="number" id="usem" /></td>
+				</tr>
+				
+				<tr>
+					<td>Event Type  : </td>
+					<td><input name = "etype" type="radio" value="s"/>&nbspSingle&nbsp&nbsp&nbsp<input name = "etype" type="radio" value="g"/>&nbspGroup</td>
+				</tr>
+				
+				<tr>
+					<td>Event Name : </td>
+					<td><select id="uename">
+								<option value="0">SELECT</option>
+								<option value="dance">Dance</option>
+								<option value="bob">Battle Of Bands</option>
+								<option value="koc">Kings Of Comedy</option>
+							</select></td>
+				</tr>
+				
+				<tr>
+					<td><input type="reset" value="Reset" /></td>
+					<td><input type="submit" value="Submit"/></td>	
+				</tr>
+			</form>
+		</table>
+	</body>
+</html>

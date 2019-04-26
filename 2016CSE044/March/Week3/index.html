@@ -1,0 +1,139 @@
+<html>
+
+	<head>
+		<title>March_3rd_Week_Monday</title>
+		<script>
+		
+			var myarr = new Array(5);
+			var i,j,n=5;
+			
+			function displaytext(){
+				var fn = document.getElementById("fname").value;
+				var ln = document.getElementById("lname").value;
+				document.getElementById("screen").innerHTML=fn+" "+ln;
+			}
+			
+			function restext(){
+				document.getElementById("fname").value="";
+				document.getElementById("lname").value="";
+				document.getElementById("screen").innerHTML="Your Name";
+			}
+			
+		</script>
+	</head>
+
+	<body>
+			<h1>My First Webpage</h1>
+			<p>My First Paragraph</p>
+			
+			<p id = "demo">Bangalore</p>
+		<script>
+			document.getElementById("demo").innerHTML="Andhra";
+			document.write("Anirudh");
+		</script>
+		
+		<p>Street</p>
+		
+		<h1 id="num1">Num 1</h1>
+		<h1>+</h1>
+		<h1 id="num2">Num 2</h1>
+		<h1>=</h1>
+		<h1 id="sum3" style="color:red;">Sum 3</h1>
+		
+		<!--<script>
+			var a = prompt("Enter Number 1 : ");
+			var b = prompt("Enter Number 2 : ");
+			document.getElementById("num1").innerHTML=a;
+			document.getElementById("num2").innerHTML=b;
+			document.getElementById("sum3").innerHTML=+a + +b;
+		</script>-->
+
+		<p id="screen">Your Name</p>		
+		<input type="text" id="fname" placeholder="Enter First Name" /><br>
+		<input type="text" id="lname" placeholder="Enter Last Name"/><br>
+		<input type="button" value="Display" onclick="displaytext();" />
+		<input type="button" value="Reset" onclick="restext();" />
+		
+		<table border="1" cellpadding="5">
+			<tr>
+				<th>Before Sorting</th>
+				<td id="arr1">Num 1</td>
+				<td id="arr2">Num 1</td>
+				<td id="arr3">Num 1</td>
+				<td id="arr4">Num 1</td>
+				<td id="arr5">Num 1</td>
+			</tr>
+			<tr>
+				<th>After Sorting</th>
+				<td id="sarr1">Num 1</td>
+				<td id="sarr2">Num 1</td>
+				<td id="sarr3">Num 1</td>
+				<td id="sarr4">Num 1</td>
+				<td id="sarr5">Num 1</td>
+			</tr>
+		</table>
+		<input type="text" id="search" placeholder="Enter search number" />
+		<input type="button" value="Search" onclick="searchnum();" />
+		<p id="searchres">Your results</p>
+
+		<script>
+			function arrayread(){
+				
+				for(i=0;i<5;i++){
+					x = prompt("Enter a number : ");
+					myarr[i]=parseInt(x);
+					document.getElementById("sum3").innerHTML=myarr[i];
+				}
+			}
+			
+			function arrsort(){
+				var temp,n=5;
+				for(i=0;i<n;i++)
+					for(j=0;j<n;j++){
+						if(myarr[i]<myarr[j]){
+							temp=myarr[i];
+							myarr[i]=myarr[j];
+							myarr[j]=temp;
+						}
+					}
+			}
+			
+			function display1(){
+				document.getElementById("arr1").innerHTML=myarr[0];
+				document.getElementById("arr2").innerHTML=myarr[1];
+				document.getElementById("arr3").innerHTML=myarr[2];
+				document.getElementById("arr4").innerHTML=myarr[3];
+				document.getElementById("arr5").innerHTML=myarr[4];
+			}
+			
+			function display2(){
+				document.getElementById("sarr1").innerHTML=myarr[0];
+				document.getElementById("sarr2").innerHTML=myarr[1];
+				document.getElementById("sarr3").innerHTML=myarr[2];
+				document.getElementById("sarr4").innerHTML=myarr[3];
+				document.getElementById("sarr5").innerHTML=myarr[4];
+			}
+			
+			arrayread();
+			display1();
+			arrsort();
+			display2();
+			
+			function searchnum(){
+				var ele = document.getElementById("search").value;
+				//alert("Im getting called");
+				var f = false;
+				for(i=0;i<n;i++){
+					if(ele==myarr[i]){
+						f=true;
+						break;
+					}
+				}
+				if(f)
+					document.getElementById("searchres").innerHTML="Number is present in array.";
+				else
+					document.getElementById("searchres").innerHTML="Number is absent in array.";
+			}
+		</script>
+	</body>
+</html>
