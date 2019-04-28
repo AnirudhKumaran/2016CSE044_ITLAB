@@ -1,7 +1,7 @@
 <?php
-$db_name = "ELECTIONCR";
+$db_name = "crelect";
 $db_user = "root";
-$db_pass = "root";
+$db_pass = "9187";
 $db_host = "localhost";
 $conn=mysqli_connect($db_host,$db_user,$db_pass,$db_name)
 or
