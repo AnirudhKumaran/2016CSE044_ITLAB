@@ -20,11 +20,11 @@
       if($count == 1) {
          #session_register("myusername");
          $_SESSION['login_user'] = $myusername;
-         $_SESSION['login_type'] = $row['UTYPE'];
-         if($row['UTYPE']=='A')
-					header("location: admin.html");
-        else
-        	header("location: home.php");
+		 
+			if($row['UTYPE']=='A')
+				header("location: admin.php");
+			else
+				header("location: home.php");
       }else {
          #$error = "Your Login Name or Password is invalid";
          echo "<script>alert('Unsuccessful Login !!');</script>";
@@ -54,6 +54,7 @@
 				background-color:rgba(255,255,255,0.5);
 				border:1px white solid;
 				color:003333;
+				text-transform:uppercase;
 			}
 			input[type="password"]{
 				background-color:rgba(255,255,255,0.5);
@@ -61,9 +62,10 @@
 				color:003333;
 			}
 			body{
-				background-image:url('images/home_bg.jpg');
+				background-image:url('images/home_wbg.jpg');
 				background-repeat:no-repeat;
-				background-size: 1360px 720px;
+				//background-size: 1360px 720px;
+				background-size:cover;
 			}
 			#box{
 				background-color:rgba(50,50,50,0.5);
