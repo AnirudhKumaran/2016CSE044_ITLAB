@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+/*<<<<<<< HEAD
 var gt="";
 var it="";
 var nc=oc=0;
@@ -95,7 +95,7 @@ function operation(a,o,b){
 		case "*":return a*b;
 		case "/":return a/b;
 	}
-=======
+=======*/
 var gt="";
 var it="";
 var nc=oc=0;
@@ -188,5 +188,5 @@ function operation(a,o,b){
 		case "*":return a*b;
 		case "/":return a/b;
 	}
->>>>>>> 1a59d6cc7f2cb123fe0777e995f31eb894a11465
+//>>>>>>> 1a59d6cc7f2cb123fe0777e995f31eb894a11465
 }
